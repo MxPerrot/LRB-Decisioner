@@ -19,7 +19,7 @@ type_effectiveness = {
     "Water": { "Bug": 1, "Dark": 1, "Dragon": 0.5, "Electric": 1, "Fairy": 1, "Fighting": 1, "Fire": 2, "Flying": 1, "Ghost": 1, "Grass": 0.5, "Ground": 2, "Ice": 1, "Normal": 1, "Poison": 1, "Psychic": 1, "Rock": 2, "Steel": 1, "Water": 0.5}
 }
 
-def totalCoeff(typeAtk1, typeAtk2, typeDef1, typeDef2): 
+def coeffTypeEff(typeAtk1, typeAtk2, typeDef1, typeDef2): 
     coeff = type_effectiveness[typeAtk1][typeDef1] 
     if typeAtk2 != "":     
         coeff = coeff * type_effectiveness[typeAtk2][typeDef1]     
@@ -30,5 +30,3 @@ def totalCoeff(typeAtk1, typeAtk2, typeDef1, typeDef2):
         if typeDef2 != "":         
             coeff = coeff * type_effectiveness[typeAtk1][typeDef2] 
     return coeff
-
-print(totalCoeff("Normal","","Grass","Ghost"))
