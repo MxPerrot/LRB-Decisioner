@@ -1,3 +1,5 @@
+import pandas as pd
+
 def statCoeff(pok1, pok2):
     coefAtt= (pok1['Attack']/pok2['Defense'])
     coefAttSpe= (pok1['Sp. Atk']/pok2['Sp. Def'])
@@ -7,12 +9,18 @@ def statCoeff(pok1, pok2):
     coefGlob=(coefAtt+coefAttSpe+coefDef+coefDefSpe+coefHP)/5
 
     if(pok1['Speed']>pok2['Speed']):
-        coefSpeed=1.2
-    else if (pok1['Speed']<pok2['Speed']):
-        coefSpeed=0.8
+        coefSpeed=1.1
+    elif(pok1['Speed']<pok2['Speed']):
+        coefSpeed=0.9
     else:
         coefSpeed=1
 
     coefGlob=coefGlob*coefSpeed
 
     return coefGlob
+
+
+df = pd.read_csv('Pokemon.csv')
+
+
+print(statCoeff(df.iloc[4],df.iloc[0]))
