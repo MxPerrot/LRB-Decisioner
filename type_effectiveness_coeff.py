@@ -19,9 +19,16 @@ type_effectiveness = {
     "Water": { "Bug": 1, "Dark": 1, "Dragon": 0.5, "Electric": 1, "Fairy": 1, "Fighting": 1, "Fire": 2, "Flying": 1, "Ghost": 1, "Grass": 0.5, "Ground": 2, "Ice": 1, "Normal": 1, "Poison": 1, "Psychic": 1, "Rock": 2, "Steel": 1, "Water": 0.5}
 }
 
-def coeffTypeEff(typeAtk1, typeAtk2, typeDef1, typeDef2): 
+import pandas as pd
+import numpy as np
+import math
+
+def get_type_effectiveness_coeff(typeAtk1: str, typeAtk2: str, typeDef1: str, typeDef2: str, show=False) -> float: 
+
     coeff = type_effectiveness[typeAtk1][typeDef1] 
-    if typeAtk2 != "":     
+
+    if typeAtk2 != "":
+
         coeff = coeff * type_effectiveness[typeAtk2][typeDef1]     
         if typeDef2 != "":         
             coeff = coeff * type_effectiveness[typeAtk1][typeDef2]         
@@ -29,4 +36,5 @@ def coeffTypeEff(typeAtk1, typeAtk2, typeDef1, typeDef2):
     else:     
         if typeDef2 != "":         
             coeff = coeff * type_effectiveness[typeAtk1][typeDef2] 
+
     return coeff
