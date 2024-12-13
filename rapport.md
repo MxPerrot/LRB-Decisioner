@@ -4,10 +4,10 @@
 
 ### Présentation du problème
 
-Le problème choisi est lié au jeu vidéo pokemon, la question est : "Lors d'un combat pokemon, est ce que je devrais conserver la pokemon actuellement déployé ou devrais-je changer de pokemon, et dans ce cas lequel devrais-je mettre parmi mes autre pokemons ?"
+Le problème choisi est lié au jeu vidéo pokemon, la question est : "Lors d'un combat pokemon, est ce que je devrais conserver le pokemon actuellement déployé ou devrais-je changer de pokemon, et dans ce cas lequel devrais-je mettre parmi mes autre pokemons ?"
 Ce problème est le problème principal lors d'un combat pokemon, car le bon choix de pokémon est ce qui définit la pluspart du temps qui sera le vainqueur.
 
-### Objectifs du projet
+### Objectif du projet
 
 L'objectif du projet et de créer un modèle n'utilisant pas de méthode d'IA pour résoudre le problème présenté précédamment. Pour cela nous devrons lui fournir une équipe de 2 à 6 pokémons dont un déja déployé ainsi qu'un pokemon opposant et il devra être en mesure d'indiquer la marche à suivre, si l'on doit garder notre pokémon sur le terrain où l'il vaut mieux échanger avec un autre des pokémons de l'équipe.
 Nous assumons ici qu'il n'y a pas de différence de niveaux entre les pokémons.
