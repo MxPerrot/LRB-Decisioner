@@ -24,11 +24,11 @@ def get_stats_coeff(pok1: list, pok2: list, speed_modifier: float = 0.1) -> floa
     coeffHP      =   pok1['HP']      / pok2['HP']     
 
     if(pok1['Speed'] > pok2['Speed']):
-        coeffSpeedDef    = 1.2
-        coeffSpeedAtk    = 1.1
+        coeffSpeedDef    = 1 + 2 * speed_modifier
+        coeffSpeedAtk    = 1 + speed_modifier
     elif (pok1['Speed'] < pok2['Speed']):
-        coeffSpeedDef    = 0.9
-        coeffSpeedAtk    = 0.8
+        coeffSpeedDef    = 1 - speed_modifier
+        coeffSpeedAtk    = 1 - 2 * speed_modifier
     else:
         coeffSpeedDef    = 1
         coeffSpeedAtk    = 1
