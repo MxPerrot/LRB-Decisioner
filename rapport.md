@@ -31,7 +31,7 @@ Ce coefficient final est comparé entre chaque pokémon de notre équipe pour d�
 
 Une fois les coefficient calculés le programme renvoie un message indiquant si le pokémon est avantagé dans le combat en cours ou quel pokémon devrait venir le remplacer.
 
-[//]: # (TODO : Interprétation des sorties)
+Il est aussi possible d'obtenir une heat map indiquant les matchups entre touts les pokémons. Les points chauds indiquent les pokémons ayant les matchups les plus écrasants.
 
 ## Analyse critique
 
